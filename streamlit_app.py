@@ -51,6 +51,9 @@ with col_left:
   height = st.selectbox("Height", [256, 512, 768, 1024], index = 1)
   steps = st.slider("Steps", 10, 40, 20)
   cfg = st.slider("CFG", 1.0, 15.0, 8.0, step=0.5)
+
+  st.subheader("Advanced")
+  seed_mode = st.radio("Seed mode", ["Random", "Fixed"], index=0)
   
 
 with col_right:
