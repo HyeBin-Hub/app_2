@@ -44,18 +44,18 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 
 
 col_left, col_right = st.columns([1, 2])
-
-with col_left:
-  st.header("Shot Settings")
-  width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
-  height = st.selectbox("Height", [256, 512, 768, 1024], index = 1)
-  steps = st.slider("Steps", 10, 40, 20)
-  cfg = st.slider("CFG", 1.0, 15.0, 8.0, step=0.5)
-
-  st.subheader("Advanced")
-  seed_mode = st.radio("Seed mode", ["Random", "Fixed"], index=0)
-  fixed_seed = st.number_input("Fixed seed", min_value=0, value=42, step=1)
+with st.container():
+  with col_left:
+    st.header("Shot Settings")
+    width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
+    height = st.selectbox("Height", [256, 512, 768, 1024], index = 1)
+    steps = st.slider("Steps", 10, 40, 20)
+    cfg = st.slider("CFG", 1.0, 15.0, 8.0, step=0.5)
   
+    st.subheader("Advanced")
+    seed_mode = st.radio("Seed mode", ["Random", "Fixed"], index=0)
+    fixed_seed = st.number_input("Fixed seed", min_value=0, value=42, step=1)
+    
 
 with col_right:
     st.header("Result")
