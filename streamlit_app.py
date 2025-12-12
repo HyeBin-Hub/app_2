@@ -43,13 +43,6 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 #     submitted = st.form_submit_button("Generate")
 
 
-
-st.set_page_config(layout="wide")
-
-with st.sidebar:
-    # 기본 설정
-    ...
-
 col_left, col_right = st.columns([1, 2])
 
 with col_left:
