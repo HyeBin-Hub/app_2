@@ -59,39 +59,39 @@ with col_left:
       height=80,
   )
 
-    # ----------------------------
-    # Session State (버튼 중복 클릭 방지)
-    # ----------------------------
-    if "busy" not in st.session_state:
+# ----------------------------
+# Session State (버튼 중복 클릭 방지)
+# ----------------------------
+if "busy" not in st.session_state:
+    st.session_state.busy = False
+
+if generate:
+    st.session_state.busy = True
+    try:
+        status_box = st.empty()
+        status_box.info("Submitting...")
+        with st.spinner("Generating..."):
+            request_id, seed, image_url = runcomfy_generate_image(
+                api_key=api_key,
+                deployment_id=deployment_id,
+                prompt=prompt,
+                negative=negative,
+                poll_interval=poll_interval,
+                width=width,
+                height=height,
+                steps=steps,
+                cfg=cfg,
+                denoise=denoise,
+                sampler_name=sampler_name,
+                scheduler=scheduler,
+            )
+        status_box.success(f"Done | request_id={request_id} | seed={seed}")
+        st.image(image_url, caption=image_url, use_container_width=True)
+
+    except Exception as e:
+        st.error(f"Failed: {e}")
+    finally:
         st.session_state.busy = False
-    
-    if generate:
-        st.session_state.busy = True
-        try:
-            status_box = st.empty()
-            status_box.info("Submitting...")
-            with st.spinner("Generating..."):
-                request_id, seed, image_url = runcomfy_generate_image(
-                    api_key=api_key,
-                    deployment_id=deployment_id,
-                    prompt=prompt,
-                    negative=negative,
-                    poll_interval=poll_interval,
-                    width=width,
-                    height=height,
-                    steps=steps,
-                    cfg=cfg,
-                    denoise=denoise,
-                    sampler_name=sampler_name,
-                    scheduler=scheduler,
-                )
-            status_box.success(f"Done | request_id={request_id} | seed={seed}")
-            st.image(image_url, caption=image_url, use_container_width=True)
-    
-        except Exception as e:
-            st.error(f"Failed: {e}")
-        finally:
-            st.session_state.busy = False
     
         
   # ----------------------------
