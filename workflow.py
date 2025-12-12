@@ -106,9 +106,6 @@ def runcomfy_generate_image(
     return request_id, seed, image_url
 
 
-st.set_page_config(page_title="RunComfy Generator", layout="centered")
-st.title("RunComfy → Streamlit Cloud 이미지 생성")
-
 # api_key = st.secrets.get("RUNCOMFY_API_KEY", "")
 # deployment_id = st.secrets.get("RUNCOMFY_DEPLOYMENT_ID", "")
 
