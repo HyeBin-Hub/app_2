@@ -36,26 +36,27 @@ with col_left:
         fixed_seed = st.number_input("Fixed seed", min_value=0, value=42, step=1)
       else:
         fixed_seed = None
-          
+
+  ########################################################################################
+  # Main Inputs 
+  ########################################################################################
+  prompt = st.text_area(
+    "Prompt", 
+    value = "cinematic film still, cyberpunk city, rain, neon lights, 8k, masterpiece", 
+    height=120,
+  )
+  
+  negative = st.text_area(
+      "Negative Prompt",
+      value="text, watermark, blurry, lowres",
+      height=80,
+  )
+            
 with col_right:
     st.header("Result")
     st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
 
-########################################################################################
-# Main Inputs 
-########################################################################################
-prompt = st.text_area(
-  "Prompt", 
-  value = "cinematic film still, cyberpunk city, rain, neon lights, 8k, masterpiece", 
-  height=120,
-  width = 500
-)
 
-negative = st.text_area(
-    "Negative Prompt",
-    value="text, watermark, blurry, lowres",
-    height=80,
-)
 
 
 
