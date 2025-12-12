@@ -18,11 +18,10 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 ########################################################################################
 col_left, divider, col_right = st.columns([1, 0.5, 2])
 
-with divider:
-    st.markdown("---")
-
 with col_left:
   st.header("Shot Settings")
+  with divider:
+    st.markdown("---")
   with st.expander("Image Size Setting"):
       # st.header("Shot Settings")
       width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
