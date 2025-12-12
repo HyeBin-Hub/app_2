@@ -48,7 +48,7 @@ prompt = st.text_area(
   "Prompt", 
   value = "cinematic film still, cyberpunk city, rain, neon lights, 8k, masterpiece", 
   height=120,
-  width = 900
+  width = 500
 )
 
 negative = st.text_area(
