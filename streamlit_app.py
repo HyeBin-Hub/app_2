@@ -25,7 +25,7 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 
 with st.container():
     st.header("Result")
-    st.image("https://www.geoje.go.kr/index.geoje?menuCd=DOM_000008001003001000")
+    st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
 
 
   
