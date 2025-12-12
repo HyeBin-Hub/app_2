@@ -38,6 +38,7 @@ with col_left:
       else:
         fixed_seed = None
           
+st.columns()
 
 with col_right:
 
