@@ -49,7 +49,8 @@ with col_left:
     st.header("Shot Settings")
 
 with col_right:
-    result_box = st.empty()   # 결과 이미지 갱신용
+    st.header("Result")
+    st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
 
 
 
