@@ -1,6 +1,6 @@
 import time
 import streamlit as st
-from workflow import 
+from workflow import runcomfy_generate_image
 
 
 st.set_page_config(
