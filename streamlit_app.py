@@ -46,7 +46,10 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 col_left, col_right = st.columns([1, 2])
 
 with col_left:
-    st.header("Shot Settings")
+  st.header("Shot Settings")
+  width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
+  height = st.selectbod("Height", [256, 512, 768, 1024], index = 1)
+  
 
 with col_right:
     st.header("Result")
