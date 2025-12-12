@@ -49,6 +49,8 @@ with col_left:
   st.header("Shot Settings")
   width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
   height = st.selectbox("Height", [256, 512, 768, 1024], index = 1)
+  steps = st.slider("Steps", 10, 40, 20)
+  cfg = st.slider("CFG", 1.0, 15.0, 8.0, step=0.5)
   
 
 with col_right:
