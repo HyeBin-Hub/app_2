@@ -63,7 +63,11 @@ with col1:
 with col2:
     shot_size = st.selectbox("Shot size", ["Wide", "Medium", "Close-up"], index=0)
 
-
+# ----------------------------
+# Session State (버튼 중복 클릭 방지)
+# ----------------------------
+if "busy" not in st.session_state:
+    st.session_state.busy = False
 
 
 
