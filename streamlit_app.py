@@ -61,7 +61,14 @@ with col_left:
     # ----------------------------
     if "busy" not in st.session_state:
         st.session_state.busy = False
-        
+    # ----------------------------
+    # Generate 버튼
+    # ----------------------------
+    generate = st.button("Generate", 
+                           type="primary", 
+                           use_container_width=True, 
+                           disabled=st.session_state.busy)
+
     if generate:
         st.session_state.busy = True
         try:
@@ -90,14 +97,6 @@ with col_left:
             st.error(f"Failed: {e}")
         finally:
             st.session_state.busy = False
-            
-  # ----------------------------
-  # Generate 버튼
-  # ----------------------------
-  generate = st.button("Generate", 
-                       type="primary", 
-                       use_container_width=True, 
-                       disabled=st.session_state.busy)
   
             
 with col_right:
