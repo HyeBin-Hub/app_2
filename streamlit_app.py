@@ -23,15 +23,9 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 #   steps = st.slider("Steps", 10,40,20)
 #   cfg = st.slider("CFG", 1.0,15.0,8.0, step = 0.5)
 
-# col1, col2 = st.columns(2)
-
-# with col1:
-#     st.write("왼쪽")
-
-# with col2:
-#     st.write("오른쪽")
-  
-left, center, right = st.columns([1, 2, 1])
+with st.container():
+    st.header("Result")
+    st.image("...")
 
 
   
