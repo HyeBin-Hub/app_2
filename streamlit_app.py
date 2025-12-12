@@ -20,8 +20,7 @@ col_left, divider, col_right = st.columns([1, 0.5, 2])
 
 with col_left:
   st.header("Shot Settings")
-  with divider:
-    st.markdown("---")
+  st.markdown("---")
   with st.expander("Image Size Setting"):
       # st.header("Shot Settings")
       width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
