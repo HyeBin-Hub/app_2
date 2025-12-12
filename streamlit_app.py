@@ -23,12 +23,18 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 #   steps = st.slider("Steps", 10,40,20)
 #   cfg = st.slider("CFG", 1.0,15.0,8.0, step = 0.5)
 
-with st.container():
-    st.header("Result")
-    st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
+# with st.container():
+#     st.header("Result")
+#     st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
 
 
-  
+tab1, tab2 = st.tabs(["Storyboard", "Logs"])
+
+with tab1:
+    st.write("이미지")
+
+with tab2:
+    st.text("로그 출력")
 
 
 
