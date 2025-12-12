@@ -1,7 +1,8 @@
-import times
-import streamlit 
+import time
+import streamlit as st
 
-streamlit.set_page_config(
+
+st.set_page_config(
   page_title = "Storyborad Generator",
   layout = "wide"
 )
@@ -9,8 +10,8 @@ streamlit.set_page_config(
 ######################
 # Header 설정 
 ######################
-streamlit.title("Storyboard Generator")
-streamlit.caption("Streamlit UI")
+st.title("Storyboard Generator")
+st.caption("Streamlit UI")
 
 
 
