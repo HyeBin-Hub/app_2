@@ -19,10 +19,10 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 col_left, divider, col_right = st.columns([1, 0.5, 2])
 
 with col_left:
+  
   st.header("Shot Settings")
-  st.markdown("---")
+
   with st.expander("Image Size Setting"):
-      # st.header("Shot Settings")
       width = st.selectbox("Width", [256, 512, 768, 1024], index = 1)
       height = st.selectbox("Height", [256, 512, 768, 1024], index = 1)
     
@@ -37,11 +37,37 @@ with col_left:
       else:
         fixed_seed = None
           
-
 with col_right:
-
     st.header("Result")
     st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
+
+########################################################################################
+# Main Inputs 
+########################################################################################
+prompt = st.text_area(
+  "Prompt", 
+  value = "cinematic film still, cyberpunk city, rain, neon lights, 8k, masterpiece", 
+  height=120
+)
+
+negative = st.text_area(
+    "Negative Prompt",
+    value="text, watermark, blurry, lowres",
+    height=80,
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
