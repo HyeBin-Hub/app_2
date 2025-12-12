@@ -106,9 +106,4 @@ def runcomfy_generate_image(
     return request_id, seed, image_url
 
 
-# api_key = st.secrets.get("RUNCOMFY_API_KEY", "")
-# deployment_id = st.secrets.get("RUNCOMFY_DEPLOYMENT_ID", "")
 
-if not api_key or not deployment_id:
-    st.error("Secrets에 RUNCOMFY_API_KEY / RUNCOMFY_DEPLOYMENT_ID를 설정해야 합니다.")
-    st.stop()
