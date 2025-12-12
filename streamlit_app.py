@@ -47,7 +47,8 @@ with col_right:
 prompt = st.text_area(
   "Prompt", 
   value = "cinematic film still, cyberpunk city, rain, neon lights, 8k, masterpiece", 
-  height=120
+  height=120,
+  width = 50
 )
 
 negative = st.text_area(
