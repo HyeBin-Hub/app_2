@@ -33,8 +33,11 @@ with col_left:
     
       st.subheader("Advanced")
       seed_mode = st.radio("Seed mode", ["Random", "Fixed"], index=0)
-      fixed_seed = st.number_input("Fixed seed", min_value=0, value=42, step=1)
-      
+      if seed_mode == "Fixed":
+        fixed_seed = st.number_input("Fixed seed", min_value=0, value = 0, value = 42, step = 1)
+      else:
+        fixed_seed = None
+          
 
 with col_right:
 
