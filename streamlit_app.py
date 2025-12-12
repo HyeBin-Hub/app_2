@@ -57,7 +57,11 @@ with col_right:
     st.image("https://serverless-api-storage.runcomfy.net/deployment_requests/7f2ebf4d-ed40-4842-aba3-c91038b9cd36/output/ComfyUI_1765533995_00001_.png")
 
 
-
+col1, col2 = st.columns(2)
+with col1:
+    style = st.selectbox("Style preset", ["None", "Cinematic", "Anime", "3D Render"], index=1)
+with col2:
+    shot_size = st.selectbox("Shot size", ["Wide", "Medium", "Close-up"], index=0)
 
 
 
