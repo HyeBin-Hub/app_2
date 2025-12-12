@@ -69,7 +69,10 @@ with col2:
 if "busy" not in st.session_state:
     st.session_state.busy = False
 
-
+# ----------------------------
+# Generate 버튼
+# ----------------------------
+generate = st.button("Generate", type="primary", use_container_width=True, disabled=st.session_state.busy)
 
 
 
