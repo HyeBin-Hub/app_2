@@ -25,7 +25,7 @@ st.caption("시나리오를 Shot 단위로 분해하고, AI로 영화 스토리�
 
 with st.container():
     st.header("Result")
-    st.image("...")
+    st.image("https://www.geoje.go.kr/index.geoje?menuCd=DOM_000008001003001000")
 
 
   
